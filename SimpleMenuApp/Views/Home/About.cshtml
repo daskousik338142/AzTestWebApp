@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "About";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2 class="text-center text-primary">@ViewBag.Title</h2>
+            <hr />
+            
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">@ViewBag.Description</p>
+                    
+                    <h5 class="mt-4">Features:</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-check text-success"></i> Responsive Design with Bootstrap</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success"></i> ASP.NET Core MVC Architecture</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success"></i> Clean Navigation Menu</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success"></i> Azure-Ready Deployment</li>
+                        <li class="list-group-item"><i class="fas fa-check text-success"></i> Cross-Platform Compatible</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

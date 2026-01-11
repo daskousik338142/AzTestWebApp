@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Services";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <h2 class="text-center text-primary">@ViewBag.Title</h2>
+            <hr />
+            
+            <p class="text-center lead">We offer a range of modern development and cloud services.</p>
+            
+            <div class="row">
+                @{
+                    var services = ViewBag.ServicesList as List<string> ?? new List<string>();
+                    var icons = new[] { "fas fa-code", "fas fa-cloud", "fab fa-microsoft", "fas fa-server" };
+                }
+                
+                @for (int i = 0; i < services.Count; i++)
+                {
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="@icons[i] fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">@services[i]</h5>
+                                <p class="card-text">Professional @services[i].ToLower() solutions tailored to your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Contact", "Home")" class="btn btn-success me-2">
+                    <i class="fas fa-envelope"></i> Get a Quote
+                </a>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

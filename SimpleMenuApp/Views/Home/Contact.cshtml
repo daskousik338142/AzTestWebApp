@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2 class="text-center text-primary">@ViewBag.Title</h2>
+            <hr />
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-envelope"></i> Email Contact</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Email:</strong> @ViewBag.Email</p>
+                            <p class="text-muted">We typically respond within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-phone"></i> Phone Contact</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Phone:</strong> @ViewBag.Phone</p>
+                            <p class="text-muted">Available Monday-Friday, 9 AM - 5 PM EST.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5><i class="fas fa-map-marker-alt"></i> Our Location</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Address:</strong> Cloud-based Services</p>
+                    <p><strong>Hosting:</strong> Microsoft Azure</p>
+                    <p class="text-muted">This application is designed for cloud deployment and can be accessed from anywhere in the world.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Services", "Home")" class="btn btn-info me-2">
+                    <i class="fas fa-cogs"></i> View Services
+                </a>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
